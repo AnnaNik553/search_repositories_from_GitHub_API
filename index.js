@@ -50,7 +50,7 @@ const debounce = (fn, debounceTime) => {
 
 // запрос
 function searchRepositories(e) {
-  if (e.target.value == '') {
+  if (e.target.value.trim() == '') {
     document.querySelectorAll(".list__item").forEach(item => item.style.display = 'none')
   } else {
     fetch(
